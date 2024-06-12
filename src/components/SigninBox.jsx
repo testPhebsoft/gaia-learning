@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 const SigninBox = () => {
   return (
     <>
-      <div className=" text-center flex flex-col items-center">
+      <div className=" text-center flex flex-col items-center pl-[70px]">
         <img className="h-[97.66px] w-[97.66px]" src="/galaLogo.svg" alt="" />
 
         <div>
@@ -13,8 +13,9 @@ const SigninBox = () => {
           <p className="text-[#6B6866]">Enter your email below to login</p>
         </div>
         <div className=" text-left">
-          <LabelInput className="w-[500px]" type="text" label="Email" id="email" />
-          <LabelInput  className="w-[500px]" type="text" label="Password" id="Password" />
+          <LabelInput className="lg:w-[500px] md:w-[300px] sm:w-[200px]" type="text" label="Email" id="email" placeholder="Enter Your Email" />
+          <LabelInput  className="w-[500px]" type="text" label="Password" id="Password" placeholder="Enter Your Password" />
+         
           <p className="text-right mt-5">Forgot Password?</p>
         </div>
 
