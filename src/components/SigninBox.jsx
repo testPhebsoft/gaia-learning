@@ -1,4 +1,7 @@
+'use client';
+
 import React from "react";
+import Link from 'next/link';
 import LabelInput from "./LabelInput";
 import { Button } from "./ui/button";
 
@@ -16,7 +19,9 @@ const SigninBox = () => {
           <LabelInput className="lg:w-[500px] md:w-[300px] sm:w-[200px]" type="text" label="Email" id="email" placeholder="Enter Your Email" />
           <LabelInput  className="w-[500px]" type="text" label="Password" id="Password" placeholder="Enter Your Password" />
          
+         <Link href="/forgotpass">
           <p className="text-right mt-5">Forgot Password?</p>
+          </Link>
         </div>
 
       <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">Sign In</Button>
