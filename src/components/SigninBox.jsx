@@ -20,11 +20,13 @@ const SigninBox = () => {
           <LabelInput  className="w-[500px]" type="text" label="Password" id="Password" placeholder="Enter Your Password" />
          
          <Link href="/forgotpass">
-          <p className="text-right mt-5">Forgot Password?</p>
+          <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
           </Link>
         </div>
 
-      <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">Sign In</Button>
+      <Link href="/gaialearn" className="block w-full mt-5">
+        <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">Sign In</Button>
+      </Link>
       </div>
 
       <div></div>
