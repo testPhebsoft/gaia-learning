@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import LabelInput from "./LabelInput";
 import { Button } from "./ui/button";
 import IncDecBtn from "./IncDecBtn";
-import Childs from "./Childs";
+import Child from "./Child";
 import TermsConditions from "./TermsConditions";
 
 export default function SingupBox() {
@@ -42,14 +42,14 @@ export default function SingupBox() {
         <div className=" text-left">
           <LabelInput
             className="lg:w-[500px] md:w-[300px] sm:w-[200px]"
-            type="text"
+            type="email"
             label="Your email"
             id="email"
             placeholder="enter your email"
           />
           <LabelInput
             className="w-[500px]"
-            type="text"
+            type="password"
             label="Password"
             id="Password"
             placeholder="enter your password"
@@ -78,17 +78,17 @@ export default function SingupBox() {
               onDecrement={decrement}
             />
           </div>
-          <Childs count={count}/>
+          <Child count={count} />
         </div>
-       <div className="flex mt-2">
-        <input type="checkbox" className="mr-4"/>
-        <p>
-          By creating a new account, I accept the{" "}
-          <span className="cursor-pointer" onClick={openModal}>
-            <u>Terms & Conditions</u>
-          </span>{" "}
-          of Gaia
-        </p>
+        <div className="flex mt-2">
+          <input type="checkbox" className="mr-4" />
+          <p>
+            By creating a new account, I accept the{" "}
+            <span className="cursor-pointer" onClick={openModal}>
+              <u>Terms & Conditions</u>
+            </span>{" "}
+            of Gaia
+          </p>
         </div>
 
         <Link href="/signin" className="block w-full mt-5">
@@ -98,7 +98,7 @@ export default function SingupBox() {
         </Link>
 
         <p className="mt-3">
-          Already have an account? {" "}
+          Already have an account?{" "}
           <Link href="/signin">
             <span>
               <b>Sign in!</b>

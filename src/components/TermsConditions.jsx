@@ -1,11 +1,12 @@
-import React from 'react';
-import Modal from 'react-modal';
-import '../app/globals.css';
+import React from "react";
+import Modal from "react-modal";
+import "../app/globals.css";
 
 // Modal.setAppElement('#root');
 
 const TermsConditions = ({ isOpen, onClose }) => {
-  const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const loremIpsum =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
     <Modal
@@ -17,9 +18,23 @@ const TermsConditions = ({ isOpen, onClose }) => {
     >
       <div className="modal-header pb-2 mb-4 flex justify-between items-center">
         <p className="text-lg font-semibold">Terms and Conditions</p>
-        <button className="close-button text-gray-500 hover:text-gray-700" onClick={onClose}>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        <button
+          className="close-button text-gray-500 hover:text-gray-700"
+          onClick={onClose}
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         </button>
       </div>
@@ -28,6 +43,6 @@ const TermsConditions = ({ isOpen, onClose }) => {
       </div>
     </Modal>
   );
-};  
+};
 
 export default TermsConditions;

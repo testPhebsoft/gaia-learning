@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import React from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import LabelInput from "./LabelInput";
 import { Button } from "./ui/button";
 
@@ -16,17 +16,31 @@ const SigninBox = () => {
           <p className="text-[#6B6866]">Enter your email below to login</p>
         </div>
         <div className=" text-left">
-          <LabelInput className="lg:w-[500px] md:w-[300px] sm:w-[200px]" type="text" label="Email" id="email" placeholder="Enter Your Email" />
-          <LabelInput  className="w-[500px]" type="text" label="Password" id="Password" placeholder="Enter Your Password" />
-         
-         <Link href="/forgotpass">
-          <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
+          <LabelInput
+            className="lg:w-[500px] md:w-[300px] sm:w-[200px]"
+            type="email"
+            label="Email"
+            id="email"
+            placeholder="Enter Your Email"
+          />
+          <LabelInput
+            className="w-[500px]"
+            type="password"
+            label="Password"
+            id="Password"
+            placeholder="Enter Your Password"
+          />
+
+          <Link href="/forgotpass">
+            <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
           </Link>
         </div>
 
-      <Link href="/gaialearn" className="block w-full mt-5">
-        <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">Sign In</Button>
-      </Link>
+        <Link href="/gaialearn" className="block w-full mt-5">
+          <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">
+            Sign In
+          </Button>
+        </Link>
       </div>
 
       <div></div>
