@@ -36,7 +36,7 @@ const LabelInput = ({ label, type, id, className, placeholder }) => {
           onBlur = {handleBlur}
         />
       </div>
-      {error && <p className="text-red-500 text-xs italic">{error}</p>}
+      {error && <p className="text-red-500 text-xs">{error}</p>}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import LabelInput from "./LabelInput";
 
 const ForgotPassword = () => {
   return (
@@ -29,17 +30,14 @@ const ForgotPassword = () => {
 
         <form>
           <div className="mb-4">
-            <label className="block mb-2 text-sm text-gray-700" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="lg:w-full md:w-full sm:w-full border-gray-300 border px-3 py-2 rounded-lg"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
+            <LabelInput
+             className="block mb-2 text-sm text-gray-700"
+             label="Email"
+             placeholder="Enter your email"
+             name="email"
+             id="email"
+             type="email"
+             />
           </div>
 
           <div className="flex items-center justify-between mb-4">
