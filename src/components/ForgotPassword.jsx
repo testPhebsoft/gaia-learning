@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Link from "next/link";
 import LabelInput from "./LabelInput";
@@ -5,7 +7,7 @@ import LabelInput from "./LabelInput";
 const ForgotPassword = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="relative lg:w-[500px] md:w-[300px] sm:w-[200px] rounded-lg overflow-hidden">
+      <div className="relative lg:w-[500px] md:w-[300px] sm:w-[200px] rounded-lg overflow-hidden py-2 px-2">
         {/* Pattern */}
         <img
           className="absolute top-* left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"

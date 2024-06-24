@@ -3,7 +3,7 @@ import React from "react";
 const GaiaButton = ({ text, onClick, isActive }) => {
   return (
     <div
-      className={`cursor-pointer rounded-md px-2 py-2 ${
+      className={`cursor-pointer rounded-md px-10 py-2 font-small ${
         isActive
           ? "bg-white text-teal-600 shadow-md"
           : "bg-gray-200 text-gray-500"

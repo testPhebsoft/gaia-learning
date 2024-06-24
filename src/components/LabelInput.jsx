@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 
-const LabelInput = ({ label, type, id, className, placeholder }) => {
+const LabelInput = ({ label, type, id, className, placeholder,disabled }) => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
@@ -34,6 +34,7 @@ const LabelInput = ({ label, type, id, className, placeholder }) => {
           value = {inputValue}
           onChange = {handleChange}
           onBlur = {handleBlur}
+          disabled ={disabled}
         />
       </div>
       {error && <p className="text-red-500 text-xs">{error}</p>}
