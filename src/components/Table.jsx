@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Table = ({ headers = [], rows = [] }) => {
   // Ensure rows is an array of arrays
@@ -17,7 +17,12 @@ const Table = ({ headers = [], rows = [] }) => {
       <thead>
         <tr>
           {headers.map((header, index) => (
-            <th key={index} className="pr-20 text-left text-gray-400 font-medium">{header}</th>
+            <th
+              key={index}
+              className="pr-20 text-left text-gray-400 font-medium"
+            >
+              {header}
+            </th>
           ))}
         </tr>
       </thead>
@@ -25,14 +30,23 @@ const Table = ({ headers = [], rows = [] }) => {
         {slicedRows.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex} className={`pr-20 text-left font-medium py-4 ${cellIndex === 3 ? 'text-teal-500' : ''}`}>{cell}</td>
+              <td
+                key={cellIndex}
+                className={`pr-20 text-left font-medium py-4 ${
+                  cellIndex === 3 ? "text-teal-500" : ""
+                }`}
+              >
+                {cell}
+              </td>
             ))}
           </tr>
         ))}
         {/* Display a message if rows are empty or invalid */}
         {slicedRows.length === 0 && (
           <tr>
-            <td colSpan={headers.length} className="text-left">No data available</td>
+            <td colSpan={headers.length} className="text-left">
+              No data available
+            </td>
           </tr>
         )}
       </tbody>

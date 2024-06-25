@@ -1,6 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import LabelInput from "./LabelInput";
-import Table from './Table';
+import Table from "./Table";
 
 const Profile = () => {
   // Arbitrary values
@@ -13,26 +14,17 @@ const Profile = () => {
     <div>
       <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
-        <div className="flex justify-between mb-4 flex-1 pr-4">
-          <h2 className="text-2xl font-bold mr-2">
-            Welcome {fullName}!
-          </h2>
+        <div className="flex justify-between mb-4">
+          <h2 className="text-2xl font-bold mr-2">Welcome {fullName}!</h2>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
           <button className="text-teal-500 hover:text-teal-700 flex">
-            <img
-              className="mr-2 w-5"
-              src="/editIcon.svg"
-              alt="icon"
-            />{" "}
-            Edit
+            <img className="mr-2 w-5" src="/editIcon.svg" alt="icon" /> Edit
           </button>
         </div>
 
-        <img
-          className="h-20 w-20 rounded-full inline-block"
-          src="/userProfile.svg"
-          alt="User Profile"
-        />
+        <Link className="h-20 w-20 rounded-full" href="#">
+          <img className="" src="/userProfile.svg" alt="User Profile" />
+        </Link>
 
         {/* Main content layout with two columns */}
         <div className="flex">
@@ -47,19 +39,21 @@ const Profile = () => {
               value={famName}
               name="famName"
               id="famName"
-              disabled={ true }
+              disabled={true}
               inputClass="bg-gray-200 border-gray-400"
             />
             {/* Contact Information section */}
-            <h2 className="text-xl font-bold mb-2 mt-10">Contact Information</h2>
+            <h2 className="text-xl font-bold mb-2 mt-10">
+              Contact Information
+            </h2>
             <LabelInput
               label="Email"
               className="mb-4"
               type="text"
-              value={ email }
+              value={email}
               name="email"
               id="email"
-              disabled={ true }
+              disabled={true}
               inputClass="bg-gray-200 border-gray-400"
             />
 
@@ -70,7 +64,7 @@ const Profile = () => {
               value=""
               name="mobile_no"
               id="mobile_no"
-              disabled={ true }
+              disabled={true}
               inputClass="bg-gray-200 border-gray-400"
             />
 
@@ -81,7 +75,7 @@ const Profile = () => {
               value=""
               name="home_no"
               id="home_no"
-              disabled={ true }
+              disabled={true}
               inputClass="bg-gray-200 border-gray-400"
             />
           </div>
@@ -146,7 +140,9 @@ const Profile = () => {
 
           {/* Right column (with Learner Details section) */}
           <div className="flex-1">
-            <h2 className="text-xl font-bold mb-2 invisible">Learner Details</h2>
+            <h2 className="text-xl font-bold mb-2 invisible">
+              Learner Details
+            </h2>
             <LabelInput
               label="Start date"
               className="mb-4"
@@ -182,23 +178,17 @@ const Profile = () => {
       </section>
 
       <section className="mr-60 mt-10">
-
         <div className="flex justify-between">
-          <h2 className="text-xl font-bold mr-2 mb-5">
-            Upcoming Sessions
-          </h2>
+          <h2 className="text-xl font-bold mr-2 mb-5">Upcoming Sessions</h2>
 
-          <span
-           className="text-teal-700 cursor-pointer"
-           onClick=""
-          >
+          <span className="text-teal-700 cursor-pointer" onClick="">
             View all
           </span>
         </div>
 
-        <Table 
-          headers = {["Date", "Start", "End", "Session Name", "Status"]}
-          rows = {["abc", "def", "ghi", "jkl", "mno"]}
+        <Table
+          headers={["Date", "Start", "End", "Session Name", "Status"]}
+          rows={["abc", "def", "ghi", "jkl", "mno"]}
         />
 
         <div className="flex justify-between">
@@ -206,32 +196,26 @@ const Profile = () => {
             Upcoming Sessions
           </h2>
 
-          <span
-           className="text-teal-700 cursor-pointer"
-           onClick=""
-          >
+          <span className="text-teal-700 cursor-pointer" onClick="">
             View all
           </span>
         </div>
 
-        <Table 
-          headers = {["Date", "Start", "End", "Session Name", "Status"]}
-          rows = {["abc", "def", "ghi", "jkl", "mno"]}
+        <Table
+          headers={["Date", "Start", "End", "Session Name", "Status"]}
+          rows={["abc", "def", "ghi", "jkl", "mno"]}
         />
 
-          <h2 className="text-xl font-bold mr-2 mt-10 mb-5">
-            Files
-          </h2>
-          <LabelInput
-              className=""
-              type="text"
-              value="popop"
-              name="subjects"
-              id="subjects"
-              disabled={true}
-              inputClass="bg-gray-200"
-            />
-
+        <h2 className="text-xl font-bold mr-2 mt-10 mb-5">Files</h2>
+        <LabelInput
+          className=""
+          type="text"
+          value="popop"
+          name="subjects"
+          id="subjects"
+          disabled={true}
+          inputClass="bg-gray-200"
+        />
       </section>
     </div>
   );

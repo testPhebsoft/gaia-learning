@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -33,13 +33,13 @@ const ForgotPassword = () => {
         <form>
           <div className="mb-4">
             <LabelInput
-             className="block mb-2 text-sm text-gray-700"
-             label="Email"
-             placeholder="Enter your email"
-             name="email"
-             id="email"
-             type="email"
-             />
+              className="block mb-2 text-sm text-gray-700"
+              label="Email"
+              placeholder="Enter your email"
+              name="email"
+              id="email"
+              type="email"
+            />
           </div>
 
           <div className="flex items-center justify-between mb-4">

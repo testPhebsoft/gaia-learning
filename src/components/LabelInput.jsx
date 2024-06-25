@@ -11,14 +11,14 @@ const LabelInput = ({
   placeholder = "",
   disabled = false,
   inputClass = "",
-  value = ""
+  value = "",
 }) => {
   const [inputValue, setInputValue] = useState(value);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const validateInput = (value) => {
-    if (!value.trim()) return 'This field is required';
-    return '';
+    if (!value.trim()) return "This field is required";
+    return "";
   };
 
   const handleChange = (e) => {
@@ -36,12 +36,14 @@ const LabelInput = ({
       <Label className={className}>{label}</Label>
       <div className="mb-2">
         {disabled ? (
-          <div className={cn(
-            "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium",
-            className,
-            inputClass,
-            "text-gray-500 font-medium" 
-          )}>
+          <div
+            className={cn(
+              "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium",
+              className,
+              inputClass,
+              "text-gray-500 font-medium"
+            )}
+          >
             {inputValue}
           </div>
         ) : (

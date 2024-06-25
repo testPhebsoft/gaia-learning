@@ -36,7 +36,6 @@ const SigninBox = () => {
               <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
             </Link>
           </div>
-          
         </div>
 
         <Link href="/gaialearn" className="block w-full mt-5">

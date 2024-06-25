@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import GaiaButton from "./ui/gaiaButton";
-import Calender from "./Calender";
+import StudentCalendar from "./Calendar/StudentCalendar";
 import Profile from "./Profile";
 
 const GaiaLearn = () => {
@@ -29,7 +29,7 @@ const GaiaLearn = () => {
       <div className="mt-4">
         {selected === "Calendar" && (
           <div>
-            <Calender />
+            <StudentCalendar />
           </div>
         )}
         {selected === "Profile" && (
