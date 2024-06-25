@@ -9,7 +9,7 @@ const SigninBox = () => {
   return (
     <>
       <div className=" text-center flex flex-col items-center pl-[70px]">
-        <img className="h-[97.66px] w-[97.66px]" src="/galaLogo.svg" alt="" />
+        <img className="h-[97.66px] w-[97.66px]" src="/gaiaLogo.svg" alt="" />
 
         <div>
           <h1 className=" font-bold text-[30px]">SIGN IN</h1>
@@ -31,9 +31,12 @@ const SigninBox = () => {
             placeholder="Enter Your Password"
           />
 
-          <Link href="/forgotpass">
-            <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
-          </Link>
+          <div className="flex justify-end">
+            <Link href="/forgotpass">
+              <p className="text-right mt-5 text-gray-500">Forgot Password?</p>
+            </Link>
+          </div>
+          
         </div>
 
         <Link href="/gaialearn" className="block w-full mt-5">

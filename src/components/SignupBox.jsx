@@ -31,7 +31,7 @@ export default function SingupBox() {
   return (
     <>
       <div className=" text-center flex flex-col items-center pl-[70px]">
-        <img className="h-[97.66px] w-[97.66px]" src="/galaLogo.svg" alt="" />
+        <img className="h-[97.66px] w-[97.66px]" src="/gaiaLogo.svg" alt="" />
 
         <div>
           <h1 className=" font-bold text-[30px]">SIGN UP</h1>

@@ -6,7 +6,7 @@ const Header = ({ current }) => {
   return (
     <header className="flex items-center justify-between px-6 bg-white shadow-md">
       {/* Logo */}
-      <img className="h-20 w-20" src="/galaLogo.svg" alt="Logo" />
+      <img className="h-20 w-20" src="/gaiaLogo.svg" alt="Logo" />
 
       {/* Navigation Buttons */}
       <div className="flex space-x-4 font-bold">

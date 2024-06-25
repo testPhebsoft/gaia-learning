@@ -4,22 +4,23 @@ import Table from './Table';
 
 const Profile = () => {
   // Arbitrary values
-  const fullName = "user";
-  const famName = "blabla";
-  const email = "email haha";
+  const fullName = "Gary Kasparov";
+  const famName = "Ahmad";
+  const email = "Email";
   const time_zone = "London";
 
   return (
     <div>
-      <div className="flex flex-col mr-60">
+      <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
         <div className="flex justify-between mb-4 flex-1 pr-4">
           <h2 className="text-2xl font-bold mr-2">
             Welcome {fullName}!
           </h2>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
-          <button className="text-blue-500 hover:text-blue-700">
+          <button className="text-teal-500 hover:text-teal-700 flex">
             <img
+              className="mr-2 w-5"
               src="/editIcon.svg"
               alt="icon"
             />{" "}
@@ -47,6 +48,7 @@ const Profile = () => {
               name="famName"
               id="famName"
               disabled={ true }
+              inputClass="bg-gray-200 border-gray-400"
             />
             {/* Contact Information section */}
             <h2 className="text-xl font-bold mb-2 mt-10">Contact Information</h2>
@@ -58,6 +60,7 @@ const Profile = () => {
               name="email"
               id="email"
               disabled={ true }
+              inputClass="bg-gray-200 border-gray-400"
             />
 
             <LabelInput
@@ -68,6 +71,7 @@ const Profile = () => {
               name="mobile_no"
               id="mobile_no"
               disabled={ true }
+              inputClass="bg-gray-200 border-gray-400"
             />
 
             <LabelInput
@@ -78,13 +82,14 @@ const Profile = () => {
               name="home_no"
               id="home_no"
               disabled={ true }
+              inputClass="bg-gray-200 border-gray-400"
             />
           </div>
 
           {/* Right column (empty initially) */}
           <div className="flex-1">
             {/* Empty space */}
-            <div className="h-20"></div>
+            {/* <div className="h-20"></div> */}
           </div>
         </div>
 
@@ -92,7 +97,7 @@ const Profile = () => {
         <div className="h-10"></div>
 
         {/* Second part of the layout */}
-        <div className="flex">
+        <section className="flex">
           {/* Left column */}
           <div className="flex-1 pr-4">
             {/* Learner Details section */}
@@ -105,6 +110,7 @@ const Profile = () => {
               name="time_zone"
               id="time_zone"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
             <LabelInput
               label="Birth date"
@@ -114,6 +120,7 @@ const Profile = () => {
               name="dob"
               id="dob"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
             <LabelInput
               label="School"
@@ -123,6 +130,7 @@ const Profile = () => {
               name="school"
               id="school"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
             <LabelInput
               label="Educators"
@@ -132,6 +140,7 @@ const Profile = () => {
               name="educators"
               id="educators"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
           </div>
 
@@ -146,6 +155,7 @@ const Profile = () => {
               name="start_date"
               id="start_date"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
             <LabelInput
               label="Grade/Year"
@@ -155,6 +165,7 @@ const Profile = () => {
               name="grade"
               id="grade"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
             <LabelInput
               label="Subjects"
@@ -164,44 +175,64 @@ const Profile = () => {
               name="subjects"
               id="subjects"
               disabled={true}
+              inputClass="bg-gray-200 border-gray-400"
             />
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
 
-      <div className="mr-60">
+      <section className="mr-60 mt-10">
 
         <div className="flex justify-between">
-          <h2 className="text-xl font-bold mr-2">
+          <h2 className="text-xl font-bold mr-2 mb-5">
             Upcoming Sessions
           </h2>
 
-          <span>
+          <span
+           className="text-teal-700 cursor-pointer"
+           onClick=""
+          >
             View all
           </span>
         </div>
 
         <Table 
           headers = {["Date", "Start", "End", "Session Name", "Status"]}
-          rows = {[]}
+          rows = {["abc", "def", "ghi", "jkl", "mno"]}
         />
 
         <div className="flex justify-between">
-          <h2 className="text-xl font-bold mr-2">
+          <h2 className="text-xl font-bold mr-2 mt-10 mb-5">
             Upcoming Sessions
           </h2>
 
-          <span>
+          <span
+           className="text-teal-700 cursor-pointer"
+           onClick=""
+          >
             View all
           </span>
         </div>
 
         <Table 
           headers = {["Date", "Start", "End", "Session Name", "Status"]}
-          rows = {[]}
+          rows = {["abc", "def", "ghi", "jkl", "mno"]}
         />
 
-      </div>
+          <h2 className="text-xl font-bold mr-2 mt-10 mb-5">
+            Files
+          </h2>
+          <LabelInput
+              className=""
+              type="text"
+              value="popop"
+              name="subjects"
+              id="subjects"
+              disabled={true}
+              inputClass="bg-gray-200"
+            />
+
+      </section>
     </div>
   );
 };
