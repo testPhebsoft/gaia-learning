@@ -23,10 +23,10 @@ const Profile = () => {
       <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
         <div className="flex w-1/2 justify-between mb-4">
-          <h2 className="text-2xl font-bold">Welcome {fullName}!</h2>
+          <h6 className="font-bold">Welcome {fullName}!</h6>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
           <button className="flex items-center text-teal-500 hover:text-teal-700">
-            <img className="mr-2 w-5" src="/editIcon.svg" alt="icon" /> Edit
+            <img className="mr-2 w-5 text-2xl" src="/editIcon.svg" alt="icon" /> Edit
           </button>
         </div>
 

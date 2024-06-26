@@ -16,7 +16,7 @@ const HeaderButton = ({
       {!isDropdown ? (
         <Link href={goTo}>
           <div
-            className={`px-4 py-2 cursor-pointer font-bold ${
+            className={`px-4 py-2 cursor-pointer font-bold body-16 ${
               isActive ? "text-teal-600" : "text-black hover:text-teal-600"
             }`}
           >
@@ -26,7 +26,7 @@ const HeaderButton = ({
       ) : (
         <div className="relative inline-block text-left group">
           <button
-            className={`inline-flex items-center px-4 py-2 font-bold ${
+            className={`inline-flex items-center px-4 py-2 font-bold body-16 ${
               isActive ? "text-teal-600" : "text-black hover:text-teal-600"
             }`}
           >
