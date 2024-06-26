@@ -2,8 +2,6 @@ import React from "react";
 import Modal from "react-modal";
 import "../app/globals.css";
 
-// Modal.setAppElement('#root');
-
 const TermsConditions = ({ isOpen, onClose }) => {
   const loremIpsum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
@@ -14,7 +12,7 @@ const TermsConditions = ({ isOpen, onClose }) => {
       onRequestClose={onClose}
       contentLabel="Terms and Conditions Modal"
       className="modal bg-white rounded-lg p-4 shadow-lg max-w-md mx-auto"
-      overlayClassName="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      overlayClassName="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center "
     >
       <div className="modal-header pb-2 mb-4 flex justify-between items-center">
         <p className="text-lg font-semibold">Terms and Conditions</p>

@@ -207,7 +207,7 @@ const Profile = () => {
             Upcoming Sessions
           </h2>
 
-          <span className="text-teal-700 cursor-pointer text-lg" onClick="">
+          <span className="text-teal-700 cursor-pointer text-lg mt-10" onClick="">
             View all
           </span>
         </div>
