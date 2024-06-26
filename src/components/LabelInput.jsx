@@ -12,6 +12,7 @@ const LabelInput = ({
   disabled = false,
   inputClass = "",
   value = "",
+  labelClass=""
 }) => {
   const [inputValue, setInputValue] = useState(value);
   const [error, setError] = useState("");
@@ -33,7 +34,7 @@ const LabelInput = ({
 
   return (
     <div>
-      <Label className={className}>{label}</Label>
+      <Label className={`${className} ${labelClass}`}>{label}</Label>
       <div className="mb-2">
         {disabled ? (
           <div

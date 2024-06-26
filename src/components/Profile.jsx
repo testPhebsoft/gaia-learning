@@ -30,9 +30,12 @@ const Profile = () => {
           </button>
         </div>
 
-        <Link className="h-20 w-20 rounded-full" href="#">
-          <img className="" src="/userProfile.svg" alt="User Profile" />
-        </Link>
+        <div className="relative flex items-center justify-center h-20 w-20" >
+          <Link href="#">
+              <img className="absolute m-auto inset-0 z-1" src="/cameraIcon.svg" alt="Edit Picture" />
+              <img className="" src="/userProfile.svg" alt="User Profile" />   
+          </Link>
+        </div>
 
         {/* Main content layout with two columns */}
         <div className="flex">

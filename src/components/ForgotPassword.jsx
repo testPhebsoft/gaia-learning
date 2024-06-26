@@ -10,8 +10,16 @@ const ForgotPassword = () => {
       <div className="relative lg:w-[500px] md:w-[300px] sm:w-[200px] rounded-lg overflow-hidden py-2 px-2">
         {/* Pattern */}
         <img
-          className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"
-          style={{ width: "150%", zIndex: -1 }}
+          className="absolute inset-0 z-index--1"
+          style={{ 
+            zIndex: -1, 
+            top: '-30%', 
+            width: '100%', 
+            height: '100%', 
+            objectFit: 'cover', 
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)', 
+            maskImage: 'radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+          }}
           src="/forgotPassPattern.svg"
           alt="pattern"
         />

@@ -106,11 +106,7 @@
     font-weight: 500;
   }
 
-  .heading, .subheading , h1, h2, h3, h4, h5, h6{
-    font-family: "Cooper Hewitt", sans-serif;
-  }
-
-  header {
+  .heading, .subheading , h1, h2, h3, h4, h5, h6 {
     font-family: "Cooper Hewitt", sans-serif;
   }
 }
