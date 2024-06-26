@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import LabelInput from "./LabelInput";
 import Table from "./Table";
+import FileList from "./FileList";
 
 const Profile = () => {
-  // Arbitrary values
-  const fullName = "Gary Kasparov";
-  const famName = "Ahmad";
-  const email = "Email";
+  const [files, setFiles] = useState(["document.pdf", "image.png", "archive.zip", "spreadsheet.xlsx"]);
+  // arbitrary values
+  const fullName = "Gareth Stevens!";
+  const famName = "Kristen Stevena";
+  const email = "garethstvens13@gmail.com";
   const time_zone = "London";
+  const dob = "12/05/2013"
+  const school = "Greentrees"
+  const educators = "Kristin Coughtrie, Neeki Armani"
+  const subjects = "GCSE Maths"
+  const grade = "5"
+  const start_date = "25/06/2019"
 
   return (
-    <div>
+    <div className="mb-5">
       <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
-        <div className="flex justify-between mb-4">
-          <h2 className="text-2xl font-bold mr-2">Welcome {fullName}!</h2>
+        <div className="flex w-1/2 justify-between mb-4">
+          <h2 className="text-2xl font-bold">Welcome {fullName}!</h2>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
-          <button className="text-teal-500 hover:text-teal-700 flex">
+          <button className="flex items-center text-teal-500 hover:text-teal-700">
             <img className="mr-2 w-5" src="/editIcon.svg" alt="icon" /> Edit
           </button>
         </div>
@@ -110,7 +118,7 @@ const Profile = () => {
               label="Birth date"
               className="mb-4"
               type="date"
-              value=""
+              value={dob}
               name="dob"
               id="dob"
               disabled={true}
@@ -120,7 +128,7 @@ const Profile = () => {
               label="School"
               className="mb-4"
               type="text"
-              value=""
+              value={school}
               name="school"
               id="school"
               disabled={true}
@@ -130,7 +138,7 @@ const Profile = () => {
               label="Educators"
               className="mb-4"
               type="text"
-              value=""
+              value={educators}
               name="educators"
               id="educators"
               disabled={true}
@@ -147,7 +155,7 @@ const Profile = () => {
               label="Start date"
               className="mb-4"
               type="date"
-              value=""
+              value={start_date}
               name="start_date"
               id="start_date"
               disabled={true}
@@ -157,7 +165,7 @@ const Profile = () => {
               label="Grade/Year"
               className="mb-4"
               type="text"
-              value=""
+              value={grade}
               name="grade"
               id="grade"
               disabled={true}
@@ -167,7 +175,7 @@ const Profile = () => {
               label="Subjects"
               className="mb-4"
               type="text"
-              value=""
+              value={subjects}
               name="subjects"
               id="subjects"
               disabled={true}
@@ -181,7 +189,7 @@ const Profile = () => {
         <div className="flex justify-between">
           <h2 className="text-xl font-bold mr-2 mb-5">Upcoming Sessions</h2>
 
-          <span className="text-teal-700 cursor-pointer" onClick="">
+          <span className="text-teal-700 cursor-pointer text-lg" onClick="">
             View all
           </span>
         </div>
@@ -196,7 +204,7 @@ const Profile = () => {
             Upcoming Sessions
           </h2>
 
-          <span className="text-teal-700 cursor-pointer" onClick="">
+          <span className="text-teal-700 cursor-pointer text-lg" onClick="">
             View all
           </span>
         </div>
@@ -207,15 +215,7 @@ const Profile = () => {
         />
 
         <h2 className="text-xl font-bold mr-2 mt-10 mb-5">Files</h2>
-        <LabelInput
-          className=""
-          type="text"
-          value="popop"
-          name="subjects"
-          id="subjects"
-          disabled={true}
-          inputClass="bg-gray-200"
-        />
+        <FileList files={files}/>
       </section>
     </div>
   );

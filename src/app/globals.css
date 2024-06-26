@@ -1,5 +1,22 @@
-/* Import Google Fonts */
+/* import Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* import Cooper-Hewitt */
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../lib/cooper-hewitt/CooperHewitt-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../lib/cooper-hewitt/CooperHewitt-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Tailwind CSS directives */
 @tailwind base;
@@ -92,9 +109,13 @@
   .heading, .subheading , h1, h2, h3, h4, h5, h6{
     font-family: "Cooper Hewitt", sans-serif;
   }
+
+  header {
+    font-family: "Cooper Hewitt", sans-serif;
+  }
 }
 
-/* Additional custom styles */
+/* additional custom styles */
 content {
   top: 50%;
   left: 50%;

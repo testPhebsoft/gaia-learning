@@ -13,7 +13,7 @@ const Table = ({ headers = [], rows = [] }) => {
   const slicedRows = validRows.slice(0, 3);
 
   return (
-    <table className="border-b border-gray-300 w-full">
+    <table className="border-b border-gray-300 w-full text-lg">
       <thead>
         <tr>
           {headers.map((header, index) => (
@@ -32,7 +32,7 @@ const Table = ({ headers = [], rows = [] }) => {
             {row.map((cell, cellIndex) => (
               <td
                 key={cellIndex}
-                className={`pr-20 text-left font-medium py-4 ${
+                className={`pr-20 text-left py-4 ${
                   cellIndex === 3 ? "text-teal-500" : ""
                 }`}
               >

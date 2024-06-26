@@ -10,7 +10,7 @@ const ForgotPassword = () => {
       <div className="relative lg:w-[500px] md:w-[300px] sm:w-[200px] rounded-lg overflow-hidden py-2 px-2">
         {/* Pattern */}
         <img
-          className="absolute top-* left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"
+          className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"
           style={{ width: "150%", zIndex: -1 }}
           src="/forgotPassPattern.svg"
           alt="pattern"
