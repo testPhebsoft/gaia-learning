@@ -50,7 +50,9 @@ const GaiaLearn = () => {
         {
           selected === "Profile" && (
             <>
-              < MaxWidthWrapper1440px children={< Profile />} />
+              <MaxWidthWrapper1440px>
+                < Profile />
+              </MaxWidthWrapper1440px>
             </>
           )
         }
