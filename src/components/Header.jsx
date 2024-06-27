@@ -71,8 +71,8 @@ const Header = ({ current }) => {
         <div className="flex items-center">
           <Link href="/profile">
             <img
-              className="h-10 w-10 rounded-full"
-              src="/userProfile.jpg"
+              className="h-10 w-10 rounded-full mr-3"
+              src="/userProfile.svg"
               alt="User Profile"
             />
           </Link>

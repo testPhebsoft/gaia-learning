@@ -108,8 +108,6 @@ export default function SingupBox() {
 
         <TermsConditions isOpen={isModalOpen} onClose={closeModal} />
       </div>
-
-      <div></div>
     </>
   );
 }

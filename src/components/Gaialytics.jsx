@@ -13,7 +13,7 @@ const Gaialytics = () => {
     return (
         <div className="flex flex-wrap mt-2 mb-10">
             <div className="w-full mb-2">
-                <Link href="#" onClick={() => handleTabClick("Overall")} className={`cursor-pointer mr-4 ${activeTab === "Overall" ? "text-teal-600 text-sm" : "text-black hover:text-teal-600"}`}>
+                <Link href="#" onClick={() => handleTabClick("Overall")} className={`cursor-pointer mr-4 ${activeTab === "Overall" ? "text-teal-600" : "text-black hover:text-teal-600"}`}>
                     Overall Gaialytics
                 </Link>
 
@@ -21,7 +21,6 @@ const Gaialytics = () => {
                     Feedback & Action
                 </Link>
             </div>
-            <section className="w-full md:w-auto rounded-lg border border-gray-200 p-5">
                 {activeTab === "Overall" && (
                     <div>
                         < OverallGaialytics />
@@ -32,7 +31,6 @@ const Gaialytics = () => {
                         < FeedbackAction />
                     </div>
                 )}
-            </section>
         </div>
     )
 }

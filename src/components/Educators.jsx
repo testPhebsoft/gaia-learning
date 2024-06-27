@@ -3,7 +3,7 @@ import React from "react";
 const Educators = () => {
     return (
         <div>
-            Educators of da schoo
+            Educators
         </div>
     )
 }
