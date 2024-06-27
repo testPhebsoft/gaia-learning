@@ -8,7 +8,7 @@ import IncDecBtn from "./IncDecBtn";
 import Child from "./Child";
 import TermsConditions from "./TermsConditions";
 
-export default function SingupBox() {
+export default function SignupBox() {
   const [count, setCount] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 

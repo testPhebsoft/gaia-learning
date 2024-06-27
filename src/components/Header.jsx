@@ -62,7 +62,7 @@ const Header = ({ current }) => {
 
         {/* Enquiry Button */}
         <Link href="/enquiry">
-          <div className="inline-block px-4 py-2 text-white bg-orange-500 rounded-full hover:bg-orange-600 cursor-pointer">
+          <div className="inline-block px-4 py-2 text-white bg-orange-500 rounded-full hover:bg-orange-600 cursor-pointer text-sm shadow-lg">
             ENQUIRY
           </div>
         </Link>

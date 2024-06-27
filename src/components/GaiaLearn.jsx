@@ -6,6 +6,7 @@ import StudentCalendar from "./Calendar/StudentCalendar";
 import Profile from "./Profile";
 import Gaialytics from "./Gaialytics";
 import Educators from "./Educators";
+import MaxWidthWrapper1440px from "./MaxWidthWrapper1440";
 
 const GaiaLearn = () => {
   const [selected, setSelected] = useState("Calendar");
@@ -38,33 +39,33 @@ const GaiaLearn = () => {
           isActive={selected === "Gaialytics"}
         />
       </div>
-      <div className="mt-4">
-        {
+      <div className="mt-4 w-full">
+        { 
           selected === "Calendar" && (
-            <div>
+            <>
               <StudentCalendar />
-            </div>
+            </>
           )
         }
         {
           selected === "Profile" && (
-            <div>
-              <Profile />
-            </div>
+            <>
+              < MaxWidthWrapper1440px children={< Profile />} />
+            </>
           )
         }
         {
           selected === "Educators" && (
-            <div>
+            <>
               <Educators />
-            </div>
+            </>
           )
         }
         {
           selected === "Gaialytics" && (
-            <div>
+            <>
               <Gaialytics />
-            </div>
+            </>
           )
         }
       </div>
