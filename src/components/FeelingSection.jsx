@@ -3,7 +3,30 @@ import OverallGaialyticsHeading from "./ui/overallGaialyticsHeading";
 import LabelInput from "./LabelInput";
 import ViewButton from "./ui/viewButton";
 
-export default function FeelingSection({ options }) {
+export default function FeelingSection() {
+    const radioOptions = [
+        {
+            img: "/green_box.png",
+            text: "Green",
+            emoji1: "/face_emojis/heart_eyes.svg", 
+            emoji2: "/face_emojis/laughing.svg", 
+            value: "green"
+        },
+        { 
+            img: "/yellow_box.png",
+            text: "Yellow", 
+            emoji1: "/face_emojis/spiral_eyes.svg", 
+            emoji2: "/face_emojis/confused.svg", 
+            value: "yellow" 
+        },
+        { 
+            img: "/red_box.png",
+            text: "Red",
+            emoji1: "/face_emojis/sick.svg", 
+            emoji2: "/face_emojis/confounded.svg", 
+            value: "red"
+        }
+    ];
     return (
         <section className="w-full max-w-[912px] rounded-lg border border-gray-200">
             <div className="flex p-5 items-center justify-between">
@@ -18,7 +41,7 @@ export default function FeelingSection({ options }) {
                 <LabelInput
                     type="radio-button"
                     id="feeling"
-                    options={options}
+                    options={radioOptions}
                 />
             </div>
 

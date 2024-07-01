@@ -3,35 +3,10 @@ import LabelInput from "./LabelInput";
 import FavCourses from "./FavCourses";
 import OverallGaialyticsHeading from "./ui/overallGaialyticsHeading";
 import OverallGaialyticsSection from "./ui/overallGaialyticsSection";
-import Achievement from "./ui/achievement";
-import ViewButton from "./ui/viewButton";
-import { View } from "lucide-react";
 import FeelingSection from "./FeelingSection";
+import WellbeingCheck from "./WellbeingCheck";
 
 const OverallGaialytics = () => {
-    const radioOptions = [
-        {
-            img: "/green_box.png",
-            text: "Green",
-            emoji1: "/face_emojis/heart_eyes.svg", 
-            emoji2: "/face_emojis/laughing.svg", 
-            value: "green"
-        },
-        { 
-            img: "/yellow_box.png",
-            text: "Yellow", 
-            emoji1: "/face_emojis/spiral_eyes.svg", 
-            emoji2: "/face_emojis/confused.svg", 
-            value: "yellow" 
-        },
-        { 
-            img: "/red_box.png",
-            text: "Red",
-            emoji1: "/face_emojis/sick.svg", 
-            emoji2: "/face_emojis/confounded.svg", 
-            value: "red"
-        }
-    ];
     const percentage = 98
     const upcomingClass = {
         "name": "Math",
@@ -43,7 +18,7 @@ const OverallGaialytics = () => {
 
             {/* first section */}
             <section className="flex gap-10">
-                <FeelingSection options={radioOptions} />
+                <FeelingSection />
 
                 <section className="w-full max-w-[448px] flex-row">
                     <div className="flex justify-between pb-5">
@@ -81,21 +56,7 @@ const OverallGaialytics = () => {
                         < OverallGaialyticsSection image="/books.svg" text="Upcoming class" h2={upcomingClass.name} p={upcomingClass.time} />
                     </section>
 
-                    <section className="rounded-lg border border-gray-200 my-5 py-2 px-5">
-                        <div className="flex gap-2 items-center justify-between">
-                            <div className="flex gap-2 items-center">
-                                <img src="/bicep.svg" alt="" />
-                                <OverallGaialyticsHeading className="section ml-3 font-bold" text="A well-being check-in"/>
-                            </div>
-                            <ViewButton onClick="#" append="all"/>
-                            
-                        </div>
-                        <div className="flex mt-5">
-                            < Achievement icon="/shoe.svg" heading="Daily step count" quantity="801" unit="step(s)" />
-                            < Achievement icon="/water_tap.svg" heading="Water intake" quantity="1,2" unit="litre(s)" />
-                            < Achievement icon="/person_running.svg" heading="Balancing on one foot" quantity="15" unit="minute(s)" />
-                        </div>
-                    </section>
+                    <WellbeingCheck />
                 </section>
 
                 <section className="w-full max-w-[448px]">
@@ -105,9 +66,6 @@ const OverallGaialytics = () => {
                             < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="Skills" />
                         </div>
                         <img src="/skillsBg.svg" alt="" />
-                    </div>
-
-                    <div>
                     </div>
                 </section>
 

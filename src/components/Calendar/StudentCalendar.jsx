@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import { DateSelectArg, EventApi, EventContentArg } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";

@@ -1,14 +1,16 @@
-import React from 'react';
-import Header from '@/components/Header';
-import GaiaLearn from '@/components/GaiaLearn';
+"use client";
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
-  return (
-    <div>
-      <Header current="GAIA Learning" />
-      <GaiaLearn />
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/gaialearn/calendar");
+  }, [router]);
+
+  return null;
 };
 
 export default Page;

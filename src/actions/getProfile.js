@@ -2,15 +2,15 @@
 
 import { cookies } from "next/headers"
 
-const getProfile = () => {
+export  async   function getProfile (){
     // let token = cookies.get("token")
     let token = "123sda";
 
-    // simulating an api call
     if(token) {
-        const user_info = {
+   
+        return {
             full_name: "Gareth Stevens",
-            familiy_name: "Kristen Stevena",
+            family_name: "Kristen Stevena",
             email: "garethstevens13@gmail.com",
             mobile_no: "",
             home_no: "",
@@ -22,9 +22,6 @@ const getProfile = () => {
             grade: "5",
             subjects: "GCSE Maths",
             files: ["document.pdf", "image.png", "archive.zip", "spreadsheet.xlsx"]
-        }
-        return user_info;
+        };
     }
 }
-
-export default getProfile;

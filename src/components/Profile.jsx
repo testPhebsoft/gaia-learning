@@ -1,10 +1,11 @@
+"use client"
 import React, { useState } from "react";
 import Link from "next/link";
 import LabelInput from "./LabelInput";
 import Table from "./Table";
 import FileList from "./FileList";
 
-const Profile = (data) => {
+const Profile = ({data}) => {
   // const [files, setFiles] = useState();
   console.log(data);
 
@@ -13,7 +14,7 @@ const Profile = (data) => {
       <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
         <div className="flex w-1/2 justify-between mb-4">
-          <h6 className="font-bold">Welcome {data.fullName}!</h6>
+          <h6 className="font-bold">Welcome {data.full_name}!</h6>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
           <button className="flex items-center text-teal-500 hover:text-teal-700">
             <img className="mr-2 w-5 text-2xl" src="/editIcon.svg" alt="icon" /> Edit
