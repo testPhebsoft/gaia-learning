@@ -1,4 +1,4 @@
-import { poppins } from "@/lib/fonts";
+// import { poppins } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en">
       <body className="regular">{children}</body>
     </html>
   );
