@@ -6,6 +6,8 @@ import OverallGaialyticsSection from "./ui/overallGaialyticsSection";
 import FeelingSection from "./FeelingSection";
 import WellbeingCheck from "./WellbeingCheck";
 import AchievementSection from "./AchievementSection";
+import LoveOfLearningOne from './LoveOfLearningOne';
+import LoveOfLearningTwo from './LoveOfLearningTwo';
 
 const OverallGaialytics = () => {
     const percentage = 98
@@ -16,7 +18,6 @@ const OverallGaialytics = () => {
 
     return (
         <div className="w-full">
-
             {/* first section */}
             <section className="flex gap-10">
                 <FeelingSection />
@@ -73,8 +74,20 @@ const OverallGaialytics = () => {
             </section>
 
             {/* third section */}
+            <section className="flex gap-10 my-10 max-w-[912px]">
+                < AchievementSection />
+            </section>
+
+            {/* fourth section */}
+            <section className="flex gap-10 my-10 max-w-[912px]">
+                < LoveOfLearningOne />
+            </section>
+
+            {/* fifth section */}
             <section className="flex gap-10 my-10">
-                <AchievementSection />
+                <section className="max-w-[912px]">
+                    < LoveOfLearningTwo />
+                </section>
             </section>
         </div>
     );

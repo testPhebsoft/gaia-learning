@@ -4,12 +4,12 @@ import OverallGaialyticsHeading from "./ui/overallGaialyticsHeading";
 import ViewButton from "./ui/viewButton";
 import getAchievementImages from '../actions/getAchievementImages';
 
-export default async function AchievementSection() {
-    const images = await getAchievementImages();
+export default  function AchievementSection() {
+    const images = getAchievementImages();
     console.log(images)
 
     return (
-        <div className="rounded-lg border border-gray-200 py-2 max-w-[912px] max-h-[844px] w-full">
+        <div className="rounded-lg border border-gray-200 py-2 max-h-[844px] w-full">
             <div className="flex justify-between items-center border-b border-gray-200 py-2 px-4 pb-3 w-full">
                 <div className="flex gap-2 items-center">
                     <img src="/party_popper.svg" alt="" />

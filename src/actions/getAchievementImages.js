@@ -1,7 +1,7 @@
 // "use server"
 // import { cookies } from "next/headers"
 
-export default async function getAchievementImages() {
+export default function getAchievementImages() {
     // let token = cookies.get("token");
     let token = "1232312";
 
