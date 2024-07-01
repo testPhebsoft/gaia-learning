@@ -6,6 +6,7 @@ import OverallGaialyticsSection from "./ui/overallGaialyticsSection";
 import Achievement from "./ui/achievement";
 import ViewButton from "./ui/viewButton";
 import { View } from "lucide-react";
+import FeelingSection from "./FeelingSection";
 
 const OverallGaialytics = () => {
     const radioOptions = [
@@ -42,28 +43,7 @@ const OverallGaialytics = () => {
 
             {/* first section */}
             <section className="flex gap-10">
-                <section className="w-full max-w-[912px] rounded-lg border border-gray-200">
-                    <div className="flex p-5 items-center justify-between">
-                        <div className="flex items-center">
-                            <img src="/face_emojis/smiling.svg" alt="Smiling Emoji" />
-                            < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="How do I feel today?" />
-                        </div>
-                        <ViewButton onClick="#" append="all"/>
-                    </div>
-
-                    <div className="pl-5">
-                        <LabelInput
-                            type="radio-button"
-                            id="feeling"
-                            options={radioOptions}
-                        />
-                    </div>
-
-                    <button className="flex justify-center items-center m-5 px-5 py-3 mt-5 border border-teal-600 shadow-sm rounded-full text-teal-600 font-semibold text-base">
-                        Save Changes
-                    </button>
-                </section>
-
+                <FeelingSection options={radioOptions} />
 
                 <section className="w-full max-w-[448px] flex-row">
                     <div className="flex justify-between pb-5">
