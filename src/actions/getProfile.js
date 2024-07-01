@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers"
 
-export  async   function getProfile (){
+export async function getProfile (){
     // let token = cookies.get("token")
     let token = "123sda";
 

@@ -6,7 +6,7 @@ export default function Skills() {
         <div className="rounded-lg border border-gray-200">
             <div className="p-2 flex items-center">
                 <img src="/key.svg" alt="Smiling Emoji" />
-                < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="Skills" />
+                < OverallGaialyticsHeading className="subtitle ml-3 font-bold text-gray-600" text="Skills" />
             </div>
             <img src="/skillsBg.svg" alt="" />
         </div>

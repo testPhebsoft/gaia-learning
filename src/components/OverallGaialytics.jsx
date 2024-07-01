@@ -5,6 +5,7 @@ import OverallGaialyticsHeading from "./ui/overallGaialyticsHeading";
 import OverallGaialyticsSection from "./ui/overallGaialyticsSection";
 import FeelingSection from "./FeelingSection";
 import WellbeingCheck from "./WellbeingCheck";
+import AchievementSection from "./AchievementSection";
 
 const OverallGaialytics = () => {
     const percentage = 98
@@ -73,7 +74,7 @@ const OverallGaialytics = () => {
 
             {/* third section */}
             <section className="flex gap-10 my-10">
-
+                <AchievementSection />
             </section>
         </div>
     );

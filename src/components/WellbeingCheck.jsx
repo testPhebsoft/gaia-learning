@@ -9,7 +9,7 @@ export default function WellbeingCheck() {
             <div className="flex gap-2 items-center justify-between">
                 <div className="flex gap-2 items-center">
                     <img src="/bicep.svg" alt="" />
-                    <OverallGaialyticsHeading className="section ml-3 font-bold" text="A well-being check-in"/>
+                    <OverallGaialyticsHeading className="subtitle ml-3 font-bold" text="A well-being check-in"/>
                 </div>
                 <ViewButton onClick="#" append="all"/>
                 

@@ -26,7 +26,7 @@ const FavCourses = ({ subjects }) => {
             <div className="flex items-center justify-between px-3 py-2">
                 <div className="flex gap-3 px-2 items-center">
                     <img src="/medal.svg" alt="" className="w-10 h-10" />
-                    <span className="subtitle font-bold py-2">My favourite courses</span>
+                    <span className="section font-bold py-2">My favourite courses</span>
                 </div>
                 <ViewButton onClick={toggleView} />
             </div>
