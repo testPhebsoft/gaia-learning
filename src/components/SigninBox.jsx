@@ -1,11 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import LabelInput from "./LabelInput";
 import { Button } from "./ui/button";
+import { Login } from '@/actions/Auth';
 
 const SigninBox = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [data, setData] = useState(null);
+
+  const handleLogin = async () => {
+    if(email && password){
+      console.log("handleLogin called.")
+      let data = await Login(email, password);
+      console.log("email", email, "pass", password)
+      console.log("Values in signIn box:", data);
+      setData(data);
+  
+      // redirect to gaialearn page after login
+      if (data) {
+        window.location.href = "/gaialearn";
+      }
+    }
+  };
+
+
   return (
     <>
       <div className=" text-center flex flex-col items-center pl-[70px]">
@@ -22,13 +43,17 @@ const SigninBox = () => {
             label="Email"
             id="email"
             placeholder="Enter Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <LabelInput
             className="w-[500px]"
             type="password"
             label="Password"
-            id="Password"
+            id="password"
             placeholder="Enter Your Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <div className="flex justify-end">
@@ -38,11 +63,12 @@ const SigninBox = () => {
           </div>
         </div>
 
-        <Link href="/gaialearn" className="block w-full mt-5">
-          <Button className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]">
+          <Button 
+            className="w-full mt-5 bg-[#1099A0] rounded-[32px] h-[48px]"
+            onClick={ handleLogin }
+            >
             Sign In
           </Button>
-        </Link>
       </div>
 
       <div></div>

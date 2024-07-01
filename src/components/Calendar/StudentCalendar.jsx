@@ -7,9 +7,9 @@ import EventModal from "../ui/eventModal";
 
 import "./StudentCalendar.css";
 
-const events = [{ title: "Meeting", start: new Date() }];
+// const events = [{ title: "Meeting", start: new Date() }];
 
-const StudentCalendar = () => {
+const StudentCalendar = ({ events }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 

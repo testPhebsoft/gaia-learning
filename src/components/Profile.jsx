@@ -4,26 +4,16 @@ import LabelInput from "./LabelInput";
 import Table from "./Table";
 import FileList from "./FileList";
 
-const Profile = () => {
-  const [files, setFiles] = useState(["document.pdf", "image.png", "archive.zip", "spreadsheet.xlsx"]);
-  // arbitrary values
-  const fullName = "Gareth Stevens!";
-  const famName = "Kristen Stevena";
-  const email = "garethstvens13@gmail.com";
-  const time_zone = "London";
-  const dob = "12/05/2013"
-  const school = "Greentrees"
-  const educators = "Kristin Coughtrie, Neeki Armani"
-  const subjects = "GCSE Maths"
-  const grade = "5"
-  const start_date = "25/06/2019"
+const Profile = (data) => {
+  // const [files, setFiles] = useState();
+  console.log(data);
 
   return (
     <div className="mb-5">
       <section className="flex flex-col mr-60">
         {/* Welcome message and user profile */}
         <div className="flex w-1/2 justify-between mb-4">
-          <h6 className="font-bold">Welcome {fullName}!</h6>
+          <h6 className="font-bold">Welcome {data.fullName}!</h6>
           {/* Edit button with pen SVG (assuming SVG is replaced here) */}
           <button className="flex items-center text-teal-500 hover:text-teal-700">
             <img className="mr-2 w-5 text-2xl" src="/editIcon.svg" alt="icon" /> Edit
@@ -47,7 +37,7 @@ const Profile = () => {
               label="Family name"
               className="mb-4"
               type="text"
-              value={famName}
+              value={data.family_name}
               name="famName"
               id="famName"
               disabled={true}
@@ -61,7 +51,7 @@ const Profile = () => {
               label="Email"
               className="mb-4"
               type="text"
-              value={email}
+              value={data.email}
               name="email"
               id="email"
               disabled={true}
@@ -72,7 +62,7 @@ const Profile = () => {
               label="Mobile phone"
               className="mb-4"
               type="text"
-              value=""
+              value={data.mobile_no}
               name="mobile_no"
               id="mobile_no"
               disabled={true}
@@ -83,7 +73,7 @@ const Profile = () => {
               label="Home phone"
               className="mb-4"
               type="text"
-              value=""
+              value={data.home_no}
               name="home_no"
               id="home_no"
               disabled={true}
@@ -111,7 +101,7 @@ const Profile = () => {
               label="Time Zone"
               className="mb-4"
               type="text"
-              value={time_zone}
+              value={data.time_zone}
               name="time_zone"
               id="time_zone"
               disabled={true}
@@ -121,7 +111,7 @@ const Profile = () => {
               label="Birth date"
               className="mb-4"
               type="date"
-              value={dob}
+              value={data.dob}
               name="dob"
               id="dob"
               disabled={true}
@@ -131,7 +121,7 @@ const Profile = () => {
               label="School"
               className="mb-4"
               type="text"
-              value={school}
+              value={data.school}
               name="school"
               id="school"
               disabled={true}
@@ -141,7 +131,7 @@ const Profile = () => {
               label="Educators"
               className="mb-4"
               type="text"
-              value={educators}
+              value={data.educators}
               name="educators"
               id="educators"
               disabled={true}
@@ -149,7 +139,7 @@ const Profile = () => {
             />
           </div>
 
-          {/* Right column (with Learner Details section) */}
+          {/* Right column*/}
           <div className="flex-1">
             <h2 className="text-xl font-bold mb-2 invisible">
               Learner Details
@@ -158,7 +148,7 @@ const Profile = () => {
               label="Start date"
               className="mb-4"
               type="date"
-              value={start_date}
+              value={data.start_date}
               name="start_date"
               id="start_date"
               disabled={true}
@@ -168,7 +158,7 @@ const Profile = () => {
               label="Grade/Year"
               className="mb-4"
               type="text"
-              value={grade}
+              value={data.grade}
               name="grade"
               id="grade"
               disabled={true}
@@ -178,7 +168,7 @@ const Profile = () => {
               label="Subjects"
               className="mb-4"
               type="text"
-              value={subjects}
+              value={data.subjects}
               name="subjects"
               id="subjects"
               disabled={true}
@@ -218,7 +208,7 @@ const Profile = () => {
         />
 
         <h2 className="text-xl font-bold mr-2 mt-10 mb-5">Files</h2>
-        <FileList files={files}/>
+        <FileList files={data.files}/>
       </section>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ViewButton from "./ui/viewButton";
 
 const ShowCourses = ({ subject, index }) => {
     const icons = ["/first_place.svg", "/second_place.svg", "/third_place.svg"];
@@ -27,12 +28,7 @@ const FavCourses = ({ subjects }) => {
                     <img src="/medal.svg" alt="" className="w-10 h-10" />
                     <span className="subtitle font-bold py-2">My favourite courses</span>
                 </div>
-                <span
-                    className="text-teal-700 cursor-pointer text-md"
-                    onClick={toggleView}
-                >
-                    View
-                </span>
+                <ViewButton onClick={toggleView} />
             </div>
             <div className="text-lg">
                 {subjects.slice(0, showAll ? subjects.length : 3).map((subject, index) => (

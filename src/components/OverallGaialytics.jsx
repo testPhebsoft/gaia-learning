@@ -3,6 +3,9 @@ import LabelInput from "./LabelInput";
 import FavCourses from "./FavCourses";
 import OverallGaialyticsHeading from "./ui/overallGaialyticsHeading";
 import OverallGaialyticsSection from "./ui/overallGaialyticsSection";
+import Achievement from "./ui/achievement";
+import ViewButton from "./ui/viewButton";
+import { View } from "lucide-react";
 
 const OverallGaialytics = () => {
     const radioOptions = [
@@ -38,30 +41,28 @@ const OverallGaialytics = () => {
         <div className="w-full">
 
             {/* first section */}
-            <section className="w-full flex gap-10">
-            <section className="w-full max-w-[912px] rounded-lg border border-gray-200">
-                <div className="flex p-5 items-center justify-between">
-                    <div className="flex items-center">
-                        <img src="/face_emojis/smiling.svg" alt="Smiling Emoji" />
-                        < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="How do I feel today?" />
+            <section className="flex gap-10">
+                <section className="w-full max-w-[912px] rounded-lg border border-gray-200">
+                    <div className="flex p-5 items-center justify-between">
+                        <div className="flex items-center">
+                            <img src="/face_emojis/smiling.svg" alt="Smiling Emoji" />
+                            < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="How do I feel today?" />
+                        </div>
+                        <ViewButton onClick="#" append="all"/>
                     </div>
-                    <span className="text-teal-400 cursor-pointer text-lg" onClick="">
-                        View all
-                    </span>
-                </div>
 
-                <div className="pl-5">
-                    <LabelInput
-                        type="radio-button"
-                        id="feeling"
-                        options={radioOptions}
-                    />
-                </div>
+                    <div className="pl-5">
+                        <LabelInput
+                            type="radio-button"
+                            id="feeling"
+                            options={radioOptions}
+                        />
+                    </div>
 
-                <button className="flex justify-center items-center m-5 px-5 py-3 mt-5 border border-teal-600 shadow-sm rounded-full text-teal-600 font-semibold text-base">
-                    Save Changes
-                </button>
-            </section>
+                    <button className="flex justify-center items-center m-5 px-5 py-3 mt-5 border border-teal-600 shadow-sm rounded-full text-teal-600 font-semibold text-base">
+                        Save Changes
+                    </button>
+                </section>
 
 
                 <section className="w-full max-w-[448px] flex-row">
@@ -106,16 +107,20 @@ const OverallGaialytics = () => {
                                 <img src="/bicep.svg" alt="" />
                                 <OverallGaialyticsHeading className="section ml-3 font-bold" text="A well-being check-in"/>
                             </div>
-                            <span className="text-teal-400 cursor-pointer text-lg" onClick="">
-                                View all
-                            </span>
+                            <ViewButton onClick="#" append="all"/>
+                            
+                        </div>
+                        <div className="flex mt-5">
+                            < Achievement icon="/shoe.svg" heading="Daily step count" quantity="801" unit="step(s)" />
+                            < Achievement icon="/water_tap.svg" heading="Water intake" quantity="1,2" unit="litre(s)" />
+                            < Achievement icon="/person_running.svg" heading="Balancing on one foot" quantity="15" unit="minute(s)" />
                         </div>
                     </section>
                 </section>
 
                 <section className="w-full max-w-[448px]">
                     <div className="rounded-lg border border-gray-200">
-                        <div className="p-5 flex items-center">
+                        <div className="p-2 flex items-center">
                             <img src="/key.svg" alt="Smiling Emoji" />
                             < OverallGaialyticsHeading className="section ml-3 font-bold text-gray-600" text="Skills" />
                         </div>
@@ -123,9 +128,13 @@ const OverallGaialytics = () => {
                     </div>
 
                     <div>
-
                     </div>
                 </section>
+
+            </section>
+
+            {/* third section */}
+            <section className="flex gap-10 my-10">
 
             </section>
         </div>

@@ -1,23 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GaiaButton from "./ui/gaiaButton";
 import StudentCalendar from "./Calendar/StudentCalendar";
 import Profile from "./Profile";
 import Gaialytics from "./Gaialytics";
 import Educators from "./Educators";
 import MaxWidthWrapper1440px from "./MaxWidthWrapper1440";
+import getEvents from "../actions/getEvents";
+import getProfile from "../actions/getProfile";
 
 const GaiaLearn = () => {
   const [selected, setSelected] = useState("Calendar");
+  const [events, setEvents] = useState([]);
+  const [profileData, setProfileData] = useState({});
+
+  // get events for calendar component
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const eventsData = await getEvents();
+      setEvents(eventsData);
+    };
+
+    fetchEvents();
+  }, []);
+
+  // get profile data for profile component
+  useEffect(() => {
+    const fetchProfile = () => {
+      const profile_data = getProfile();
+      setProfileData(profile_data);
+    };
+
+    fetchProfile();
+  }, []);
 
   return (
     <div className="mt-4 ml-8">
-      {" "}
-      {/* Added margin to the left */}
       <div className="font-bold inline-flex space-x-4 bg-gray-200 py-2 px-4 rounded-md inline-block">
-        {" "}
-        {/* Adjusted styles here */}
         <GaiaButton
           text="Calendar"
           onClick={() => setSelected("Calendar")}
@@ -40,36 +60,16 @@ const GaiaLearn = () => {
         />
       </div>
       <div className="mt-4 w-full">
-        { 
-          selected === "Calendar" && (
-            <>
-              <StudentCalendar />
-            </>
-          )
-        }
-        {
-          selected === "Profile" && (
-            <>
-              <MaxWidthWrapper1440px>
-                < Profile />
-              </MaxWidthWrapper1440px>
-            </>
-          )
-        }
-        {
-          selected === "Educators" && (
-            <>
-              <Educators />
-            </>
-          )
-        }
-        {
-          selected === "Gaialytics" && (
-            <>
-              <Gaialytics />
-            </>
-          )
-        }
+        {selected === "Calendar" && (
+          <StudentCalendar events={events} />
+        )}
+        {selected === "Profile" && (
+          <MaxWidthWrapper1440px>
+            <Profile data={profileData} />
+          </MaxWidthWrapper1440px>
+        )}
+        {selected === "Educators" && <Educators />}
+        {selected === "Gaialytics" && <Gaialytics />}
       </div>
     </div>
   );

@@ -12,18 +12,21 @@ const LabelInput = ({
   inputClass = "",
   value = "",
   labelClass = "",
-  options = []  // New prop for radio options
+  onChange,
+  options = [] // New prop for radio options
 }) => {
   const [inputValue, setInputValue] = useState(value);
 
   const handleChange = (e) => {
-    const { value } = e.target;
-    setInputValue(value);
+    setInputValue(e.target.value);
+    if (onChange) {
+      onChange(e);
+    }
   };
 
   return (
     <div>
-      <Label className={`${className} ${labelClass}`}>{label}</Label>
+      <Label className={cn(className, labelClass)}>{label}</Label>
       <div className="mb-2">
         {type === "radio-button" ? (
           <div className="flex flex-col gap-4">
@@ -65,7 +68,7 @@ const LabelInput = ({
             </div>
           ) : (
             <input
-              className={`${className} ${inputClass}`}
+              className={cn(className, inputClass)}
               type={type}
               id={id}
               placeholder={placeholder}

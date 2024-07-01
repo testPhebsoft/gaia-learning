@@ -55,7 +55,7 @@ const EventModal = ({ isOpen, onRequestClose, event }) => {
               className="w-8 h-8 bg-cover"
               style={{ backgroundImage: "url('/ledger.svg')" }}
             ></div>
-            <div className="w-32 h-7 font-semibold text-xl leading-7 text-black">
+            <div className="w-full h-7 font-semibold text-xl leading-7 text-black">
               {event?.title}
             </div>
           </div>

@@ -38,6 +38,10 @@ const FileItem = ({ fileName }) => {
 };
 
 const FileList = ({ files }) => {
+    if (!files || files.length === 0) {
+        return <div>No files.</div>;
+    }
+
     return (
         <div className="h-36 overflow-y-auto pr-3">
             {files.map((file, index) => (
